@@ -1,4 +1,4 @@
-package newslistscreen.retrofitdata;
+package newslistscreen.model.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

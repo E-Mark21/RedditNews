@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">RedditNews</string>
+    <string name="posted_hours_ago"> hours_ago</string>
+    <string name="comments"> Comments</string>
+    <string name="save">Save Image</string>
 </resources>

@@ -1,13 +1,12 @@
-package newslistscreen.retrofitdata;
+package newslistscreen.model.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class NewsArray {
+public class RedditTopNews {
     @JsonProperty("kind")
     private String kind;
     @JsonProperty("data")
-    private News news;
-
+    private Data data;
 
     public String getKind() {
         return kind;
@@ -15,11 +14,15 @@ public class NewsArray {
     public void setKind(String kind) {
         this.kind = kind;
     }
-    public News getNews() {
-        return news;
+    public Data getData() {
+        return data;
     }
-    public void setNews(News news) {
-        this.news = news;
+    public void setData(Data data) {
+        this.data = data;
     }
+
+
+
+
 }
 

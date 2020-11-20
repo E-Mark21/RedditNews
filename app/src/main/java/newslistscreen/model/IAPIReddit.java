@@ -1,6 +1,6 @@
-package newslistscreen;
+package newslistscreen.model;
 
-import newslistscreen.retrofitdata.RedditTopNews;
+import newslistscreen.model.pojo.RedditTopNews;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

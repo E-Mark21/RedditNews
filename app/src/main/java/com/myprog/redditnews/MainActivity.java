@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 
-import newslistscreen.NewsListScreenView;
+import newslistscreen.view.NewsListScreenView;
 
 public class MainActivity extends AppCompatActivity {
 

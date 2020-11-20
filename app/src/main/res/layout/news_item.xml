@@ -6,7 +6,7 @@
     android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="130dp"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="10dp"
     card_view:cardBackgroundColor="@color/card_background"
     card_view:cardCornerRadius="5dp"
     android:elevation="5dp">
@@ -19,8 +19,8 @@
             android:id="@+id/thumbnail"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:scaleType="center"
-            android:src="@drawable/background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />
@@ -32,6 +32,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             tools:text="ost_rx"
+            android:textStyle="bold"
             card_view:layout_constraintStart_toEndOf="@+id/thumbnail"
             card_view:layout_constraintTop_toTopOf="parent" />
 
@@ -41,8 +42,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="80dp"
-            tools:text="Posted by 16 hours ago"
+            tools:text="16"
             card_view:layout_constraintStart_toEndOf="@+id/thumbnail"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/posted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/posted_hours_ago"
+            card_view:layout_constraintStart_toEndOf="@+id/posted_by"
             card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -51,7 +62,26 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="100dp"
-            tools:text="5652 comments"
+            tools:text="5652"
+            card_view:layout_constraintStart_toEndOf="@+id/thumbnail"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="100dp"
+            android:text="@string/comments"
+            card_view:layout_constraintStart_toEndOf="@+id/num_comments"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="260dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
             card_view:layout_constraintStart_toEndOf="@+id/thumbnail"
             card_view:layout_constraintTop_toTopOf="parent" />
 
