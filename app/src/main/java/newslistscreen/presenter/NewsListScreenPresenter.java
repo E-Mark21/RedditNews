@@ -25,7 +25,6 @@ public class NewsListScreenPresenter implements MainContract.Presenter {
         for (int i =0; i < posted.size(); i++) {
             timePublic.add(getTimePublic((Integer) posted.get(i)));
         }
-
         mView.updateAdapter(author, timePublic, num_comments, thumbnail, url, title);
     }
 

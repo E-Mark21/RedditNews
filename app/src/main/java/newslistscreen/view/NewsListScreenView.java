@@ -24,12 +24,12 @@ public class NewsListScreenView extends Fragment implements MainContract.View {
     RecyclerView newsListRecyclerView;
     CardAdapter adapter;
 
-    private static ArrayList<String> sUrl = new ArrayList<>();
-    private static ArrayList<String> sAuthor = new ArrayList<>();
-    private static ArrayList<String> sThumbnail = new ArrayList<>();
-    private static ArrayList<String> sTitle = new ArrayList<>();
-    private static ArrayList<Integer> sTimePublic = new ArrayList<>();
-    private static ArrayList<Integer > sNumComments = new ArrayList<>();
+    private static ArrayList<String> sUrl = new ArrayList<>();             // Пробовал вынести инициализацию в отдельный метод.
+    private static ArrayList<String> sAuthor = new ArrayList<>();          // Программа работать откахалась из-за статических переменных.
+    private static ArrayList<String> sThumbnail = new ArrayList<>();       // Сложно мне реализовывать работы асинхронных методов.
+    private static ArrayList<String> sTitle = new ArrayList<>();           // В общем доступе годных примеров реализвции не наблюдал.
+    private static ArrayList<Integer> sTimePublic = new ArrayList<>();     // Во всех тутториалах все методы суют в код активити без применения паттернов слоя презентации.
+    private static ArrayList<Integer> sNumComments = new ArrayList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,13 +46,12 @@ public class NewsListScreenView extends Fragment implements MainContract.View {
         newsListRecyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         newsListRecyclerView.setLayoutManager(layoutManager);
-        sAuthor.add("");
-        sThumbnail.add("placeholder");
+        sAuthor.add("");                              // Запись не корректная, нужно использовать бы паттерн "наблюдатель" (но пока не хватает скила).
+        sThumbnail.add("placeholder");                // В этом месте реализовать бы чтение кэшированых записей.
         sUrl.add("placeholder");
         sTitle.add("");
         sTimePublic.add(0);
         sNumComments.add(0);
-
         return newsListRecyclerView;
     }
 

@@ -17,7 +17,6 @@ import com.myprog.redditnews.R;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -75,8 +74,6 @@ public class ImageViewerActivity extends AppCompatActivity {
             outputStream.flush();
             outputStream.close();
             MediaStore.Images.Media.insertImage(getContentResolver(), file.getAbsolutePath(), fileName, fileName);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

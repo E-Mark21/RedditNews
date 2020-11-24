@@ -68,8 +68,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
             }
         });
 
-        Picasso.with(holder.itemView.getContext()).
-                load(thumbnail.get(position))
+        Picasso.with(holder.itemView.getContext()).      // В данном примере мне кажется лучше оставить так.
+                load(thumbnail.get(position))            // 4 строчки кода вместо целого метода с передачей ему параметров.
                 .placeholder(R.drawable.placeholder)
                 .into(holder.thumbnail);
     }

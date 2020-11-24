@@ -50,8 +50,8 @@ public class NewsListScreenModel implements MainContract.Model {
                 Data topNewsFromReddit = redditTopNews.getData();
                 List<NewsArray> newsArrayList = new ArrayList<>(topNewsFromReddit.getNewsArray());
                 for (int i = 0; i < newsArrayList.size(); i++) {
-                    NewsArray newsArray = newsArrayList.get(i);
-                    News news = newsArray.getNews();
+                    NewsArray newsArray = newsArrayList.get(i);         // Реализовав бы модель с применением "наблюдателя"
+                    News news = newsArray.getNews();                    // можно избавиться от этих массивов
                     author.add(news.getAuthor());
                     posted.add(news.getCreated_utc());
                     numComments.add(news.getNum_comments());
